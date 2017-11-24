@@ -1,0 +1,31 @@
+table
+    background-color: #fff
+    width: 100%
+    border: 0
+    margin: 0 auto
+    padding: 0 0
+    clear: both
+    white-space: nowrap
+    border-collapse: collapse
+    /*table-layout: fixed*/ /* never use this!!! */
+    table-layout: auto
+    th,td
+        white-space: nowrap
+        text-overflow: ellipsis
+        overflow: hidden
+        font-weight: normal
+        -webkit-box-sizing: content-box
+        -moz-box-sizing: content-box
+        box-sizing: content-box
+        vertical-align: middle
+        background-clip: content-box /* crutch for firefox */
+
+
+$i: 120
+@while $i > 1
+    th[width="#{$i}"],
+    td[width="#{$i}"]
+        min-width: #{$i}px
+        max-width: #{$i}px
+
+    $i: $i - 5
